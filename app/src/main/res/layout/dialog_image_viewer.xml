@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Close Button -->
+    <ImageView
+        android:id="@+id/btnCloseDialog"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:src="@drawable/img"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#FFFFFF"
+        android:contentDescription="Close" />
+
+    <!-- Image Title -->
+    <TextView
+        android:id="@+id/tvImageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Dokumen"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Fullscreen Image -->
+    <ImageView
+        android:id="@+id/fullscreenImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:contentDescription="Document Image" />
+
+</RelativeLayout>

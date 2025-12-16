@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_green"
+    tools:context="com.example.sia.RegisterActivity">
+
+    <!-- Logo Background (Final: Kecil & Pudar, diletakkan di tengah) -->
+    <!-- Disesuaikan agar logo tidak terlalu mengganggu formulir input -->
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/logo_ugn2"
+        android:alpha="0.10"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Header (Final: gradasi + garis bawah) -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/header_auth_rounded"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerLogo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo_ugn2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNIVERSITAS GLOBAL NUSANTARA"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/headerLogo"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp" />
+    </RelativeLayout>
+
+    <!-- Form Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:paddingTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrasi"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Nama Lengkap Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Nama Lengkap Input -->
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textCapWords"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:singleLine="true"/>
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:singleLine="true"/>
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:singleLine="true"/>
+
+        <!-- Confirm Password Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Confirm Password Input -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:singleLine="true"/>
+
+        <!-- Spacer (mendorong tombol ke bawah) -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Tombol Register (final: 200dp, gradasi, margin 40dp) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/gradient_horizontal"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="Register"
+            android:textColor="@color/ugn_beige_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Tambahkan link Login di bawah tombol (sesuai standar UX) -->
+        <TextView
+            android:id="@+id/tvLoginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sudah punya akun? Login di sini"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_green">
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header with Back Button -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_opacity"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_back_rounded" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_button_primary"
+                android:paddingStart="32dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="8dp"
+                android:text="Informasi Penting"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Content Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="#F5F5DC"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:text="1. Satu NIK hanya dapat dipakai untuk membuat 1(satu) akun pendaftaran. Jika membuat lebih dari 1 akun, pastikan Saudara menggunakan NIK yang benar, bukan Nomor Kartu Keluarga."
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="2. Saudara yang mempunyai dua akun, membuat akun Peserta Seleksi Calon Mahasiswa Baru di Universitas Global Nusantara"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="3. Email yang digunakan untuk membuat akun merupakan email personal yang berstatus aktif semua komunikasi berkaitan dengan proses seleksi akan dilakukan melalui email"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="4. Satu alamat email hanya dapat dipergunakan untuk 1 (satu) kali pembentukan akun pada 1 (satu) periode pendaftaran di Universitas Global Nusantara"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="5. Satu akun pendaftaran hanya dapat digunakan untuk mendaftar pada 1 (satu) intake yang berbeda pada 1 (satu) periode pendaftaran yang sama. Saudara dapat menggunakan akun yang sama untuk mendaftar ke intake yang berbeda, tetapi pada periode pendaftaran yang berbeda."
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="6. Password adalah kunci yang digunakan untuk mengakses akun Peserta Seleksi Calon Mahasiswa Baru di Universitas Global Nusantara. Password terdiri dari (minimal) 8 digit angka dan/atau huruf dan/atau kombinasi keduanya."
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="7. Proses pengisian data pendaftaran dan unggah dokumen dapat dilakukan secara bertahap selama belum dilakukan penguncian data pendaftaran."
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="8. Apabila ada kendala dalam pengisian, silakan menghubungi WA 0811-234-1049 atau email ke ugn@ugn.ac.id atau program studi tujuan Saudara."
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/gradient_horizontal"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:paddingHorizontal="48dp"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        android:textColor="#1B5E20"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+        <!-- Bottom Navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_bottom_nav_border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:src="@drawable/material_symbols_home_rounded" />
+
+            <LinearLayout
+                android:id="@+id/navDaftar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/daftar_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Daftar"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/navHistory"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_history" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Header dengan GRADIENT + GARIS BAWAH (tebal 4dp)
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. Lapisan Latar Belakang (Garis Beige Bawah) -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Warna garisnya (beige terang) -->
+            <solid android:color="@color/ugn_beige_text" />
+            <!-- Sudut tumpul di atas -->
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp" />
+        </shape>
+    </item>
+
+    <!-- 2. Lapisan Utama (Gradient Kuning di atas) -->
+    <item android:bottom="4dp"> <!-- Ini adalah garis tebal 4dp -->
+        <shape android:shape="rectangle">
+
+            <!-- Gradient: dari beige terang ke kuning -->
+            <gradient
+                android:startColor="@color/ugn_beige_text"
+                android:endColor="@color/ugn_yellow"
+                android:angle="270" /> <!-- Atas ke bawah -->
+
+            <!-- Sudut tumpul yang sama -->
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "24609905212",
+    "project_id": "sia-ugn",
+    "storage_bucket": "sia-ugn.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24609905212:android:8e905e7f338da01be90139",
+        "android_client_info": {
+          "package_name": "com.example.sia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1HEig1hB0_qfd3DPPj89euU6EoU9Pjco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

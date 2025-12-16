@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SIA"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ============================================ -->
+        <!-- AUTENTIKASI                                  -->
+        <!-- ============================================ -->
+        <activity
+            android:name=".LandingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- ============================================ -->
+        <!-- DASHBOARD                                    -->
+        <!-- ============================================ -->
+        <activity
+            android:name=".DashboardMahasiswa"
+            android:exported="false" />
+
+        <activity
+            android:name=".DashboardAdmin"
+            android:exported="false" />
+
+        <!-- MainActivity - Redirect Helper dengan Transparent Theme -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SIA.Transparent" />
+
+        <!-- ============================================ -->
+        <!-- ALUR PENDAFTARAN MAHASISWA                   -->
+        <!-- ============================================ -->
+        <activity
+            android:name=".TataCaraPendaftaran"
+            android:exported="false" />
+
+        <activity
+            android:name=".InformasiPenting"
+            android:exported="false" />
+
+        <activity
+            android:name=".FormPendaftaran"
+            android:exported="false" />
+
+        <activity
+            android:name=".FormPendaftaran2"
+            android:exported="false" />
+
+        <activity
+            android:name=".StatusPengumumanActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HasilSeleksi"
+            android:exported="false" />
+
+        <!-- ============================================ -->
+        <!-- MANAJEMEN ADMIN                              -->
+        <!-- ============================================ -->
+        <activity
+            android:name=".KelolaPendaftaranActivity"
+            android:exported="false"
+            android:label="Kelola Pendaftaran" />
+
+        <activity
+            android:name=".VerificationDokumen"
+            android:exported="false"
+            android:label="Verifikasi Dokumen" />
+
+        <activity
+            android:name=".VerificationActivity"
+            android:exported="false"
+            android:label="Verifikasi Pembayaran" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_green"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- Header Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_gelombang"
+            android:padding="20dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_menu_24"
+                android:padding="2dp"
+                app:tint="#000000" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Hasil Seleksi"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Status Banner -->
+        <LinearLayout
+            android:id="@+id/layout_status_banner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_status_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat! 🎉"
+                android:textColor="#FFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Selamat! 🎉" />
+        </LinearLayout>
+
+        <!-- Main Message Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#F5E6B3"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_message_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Anda dinyatakan lulus seleksi\npendaftaran mahasiswa baru"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="2dp"
+                    tools:text="Anda dinyatakan lulus seleksi\npendaftaran mahasiswa baru" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Universitas Global Nusantara"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Message khusus tidak lulus -->
+                <TextView
+                    android:id="@+id/tv_message_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Jangan putus asa dan tetap semangat!"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Detail Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#F5E6B3"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- User Info Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Avatar -->
+                    <TextView
+                        android:id="@+id/tvInitials"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:gravity="center"
+                        android:text="SA"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="SA" />
+
+                    <!-- Name and ID -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_nama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sarah Johnson"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="Sarah Johnson" />
+
+                        <TextView
+                            android:id="@+id/tv_nomor_pendaftar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Nomor Pendaftar: PMB2024001"
+                            android:textColor="#555"
+                            android:textSize="12sp"
+                            tools:text="Nomor Pendaftar: PMB2024001" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#CCC" />
+
+                <!-- Detail Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Program -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Program :"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_program"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ilmu Komputer"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            tools:text="Ilmu Komputer" />
+                    </LinearLayout>
+
+                    <!-- Status -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Status :"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Diterima"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="Diterima" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button Kembali ke Home -->
+        <Button
+            android:id="@+id/btn_kembali_home"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/gradient_horizontal"
+            app:backgroundTint="@null"
+            android:text="Kembali Ke Home"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#015023"
+    android:fillViewport="true"
+    tools:context=".VerificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/ivLogoBackground"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:alpha="0.2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_ugn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/viewAppBar"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:background="@drawable/app_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_back_rounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Verifikasi Pembayaran"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardChipLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="111dp"
+            app:cardBackgroundColor="#A3DABC4E"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#000000"
+            app:strokeWidth="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="6dp"
+                android:text="Verifikasi Pembayaran"
+                android:textColor="#F5EFD3"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPaymentInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="192dp"
+            app:cardBackgroundColor="#F5EFD3"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#DABC4E"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="2dp"
+                        android:text="Pending"
+                        android:textColor="#FFFFFF"
+                        android:textSize="7sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/icMoney"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/bag_money"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvName"
+                    app:tint="#000000" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Jumlah : "
+                    android:textColor="#000000"
+                    android:textSize="7sp"
+                    app:layout_constraintBottom_toBottomOf="@id/icMoney"
+                    app:layout_constraintStart_toEndOf="@id/icMoney"
+                    app:layout_constraintTop_toTopOf="@id/icMoney" />
+
+                <TextView
+                    android:id="@+id/tvAmountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 550.000"
+                    android:textColor="#000000"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/tvAmount"
+                    app:layout_constraintStart_toEndOf="@id/tvAmount"
+                    app:layout_constraintTop_toTopOf="@id/tvAmount" />
+
+                <ImageView
+                    android:id="@+id/icBank"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/bank_fill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icMoney"
+                    app:tint="#000000" />
+
+                <TextView
+                    android:id="@+id/tvMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Method : Bank Transfer (BCA)"
+                    android:textColor="#000000"
+                    android:textSize="7sp"
+                    app:layout_constraintBottom_toBottomOf="@id/icBank"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icBank"
+                    app:layout_constraintTop_toTopOf="@id/icBank" />
+
+                <ImageView
+                    android:id="@+id/icTag"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/famicons_pricetags"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icBank"
+                    app:tint="#000000" />
+
+                <TextView
+                    android:id="@+id/tvTxn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="TXN : #TXN123456789"
+                    android:textColor="#000000"
+                    android:textSize="7sp"
+                    app:layout_constraintBottom_toBottomOf="@id/icTag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icTag"
+                    app:layout_constraintTop_toTopOf="@id/icTag" />
+
+                <ImageView
+                    android:id="@+id/icDate"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/stash_data"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icTag"
+                    app:tint="#000000" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Date : 15 Des 2024, 14:30"
+                    android:textColor="#000000"
+                    android:textSize="7sp"
+                    app:layout_constraintBottom_toBottomOf="@id/icDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icDate"
+                    app:layout_constraintTop_toTopOf="@id/icDate" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnVerifikasi"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="#189653"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toStartOf="@id/btnTolak"
+                    app:layout_constraintTop_toBottomOf="@id/icDate">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Verifikasi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnTolak"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#BE0414"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icDate">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tolak"
+                        android:textColor="#FFFFFF"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardReceipt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#F5EFD3"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardPaymentInfo"
+            app:strokeColor="#DABC4E"
+            app:strokeWidth="3dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvReceiptTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📄 Transfer Receipt Preview"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvReceiptDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="From : John Doe (123-456-789)\nTo : SIA Account (987-654-321)\nJumlah : Rp 550.000"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReceiptTitle" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnViewImage"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="#DABC4E"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReceiptDetails"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/baseline_search_24"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View Full Image"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInfoLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="72dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardReceipt"
+            app:strokeColor="#DABC4E"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Silahkan tentukan apakah pendaftar lulus/tidak"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDecision"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="56dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#F5EFD3"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardInfoLabel"
+            app:strokeColor="#DABC4E"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnAccept"
+                    android:layout_width="197dp"
+                    android:layout_height="33dp"
+                    app:cardBackgroundColor="#B8189653"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Accept Pendaftar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnReject"
+                    android:layout_width="197dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="19dp"
+                    app:cardBackgroundColor="#BABE0414"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#323131"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Reject Pendaftar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

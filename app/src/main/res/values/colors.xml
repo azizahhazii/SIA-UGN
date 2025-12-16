@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="deep_green">#015023</color>
+    <color name="primary_gold">#BDA64C</color>
+    <color name="light_bg_gold">#F5E6D3</color>
+    <color name="red_error">#DC2626</color>
+    <color name="red">#DC2626</color>
+    <color name="dark_gray">#666666</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#4CAF50</color>
+    <color name="status_approved_green">#388E3C</color> <color name="status_approved_light">#E8F5E9</color> ```
+    <color name="status_rejected_red">#BE0414</color>
+    <color name="ugn_green">#015023</color>
+    <color name="ugn_yellow">#DABC4E</color>
+    <color name="ugn_beige_button">#F5F5DC</color>
+    <color name="ugn_beige_text">#F5EFD3</color>
+    <color name="ugn_black_overlay">#26000000</color>
+    <color name="ugn_input_placeholder">#999999</color>
+</resources>

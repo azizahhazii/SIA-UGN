@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#F5F5DC"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Document Label -->
+        <TextView
+            android:id="@+id/tvDocumentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KTP/Identitas"
+            android:textColor="#1B5E20"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Dotted Border Container -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDocumentPreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDocumentLabel">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dotted_border"
+                android:padding="12dp">
+
+                <!-- Image Icon -->
+                <ImageView
+                    android:id="@+id/ivImageIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_person_24"
+                    android:contentDescription="Image"
+                    app:tint="#8B6914"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- File Name -->
+                <TextView
+                    android:id="@+id/tvFileName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="ktp_john_doe.jpg"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivImageIcon"
+                    app:layout_constraintEnd_toStartOf="@id/btnView"
+                    app:layout_constraintStart_toEndOf="@id/ivImageIcon"
+                    app:layout_constraintTop_toTopOf="@id/ivImageIcon" />
+
+                <!-- View Button -->
+                <ImageView
+                    android:id="@+id/btnView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="2dp"
+                    android:src="@drawable/baseline_remove_red_eye_24"
+                    android:contentDescription="View"
+                    app:tint="#666666"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Approve Button -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnApprove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="#4CAF50"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivImageIcon">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/bg_circle_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Approve"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Reject Button -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    app:cardBackgroundColor="#E57373"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnApprove"
+                    app:layout_constraintStart_toEndOf="@id/btnApprove"
+                    app:layout_constraintTop_toTopOf="@id/btnApprove">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp">
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/bg_circle_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reject"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Status Badge -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardStatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#4CAF50"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnApprove"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/btnApprove">
+
+                    <TextView
+                        android:id="@+id/tvStatusBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="Approved"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

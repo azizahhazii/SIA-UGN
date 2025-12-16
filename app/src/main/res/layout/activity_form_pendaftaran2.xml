@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B5E20"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@drawable/header_gelombang"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Pendaftaran"
+                android:textColor="#1B5E20"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_weight="1"
+                    android:background="#D4AF37" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="#D4AF37" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#1B5E20"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Data Akademik"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Sekolah Asal"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/etSekolahAsal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="Masukkan nama sekolah asal"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#757575" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Status Kelulusan (Sudah/Belum)"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/spinnerStatusKelulusan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner"
+                android:popupBackground="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ijazah Terakhir (SMA/SMK/MA/Ijazah)"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <Spinner
+                android:id="@+id/spinnerIjazahTerakhir"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner"
+                android:popupBackground="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Upload Ijazah Terakhir"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/btnUploadIjazah"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_upload_dashed"
+                android:drawableTop="@drawable/outline_add_circle_24"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Tap untuk upload dokumen"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableTint="#1B5E20" />
+
+            <TextView
+                android:id="@+id/tvIjazahFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Upload SKL (Jika Ijazah belum keluar)"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/btnUploadSKL"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_upload_dashed"
+                android:drawableTop="@drawable/outline_add_circle_24"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Tap untuk upload dokumen"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableTint="#1B5E20" />
+
+            <TextView
+                android:id="@+id/tvSKLFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Upload Transkrip Nilai atau rapor satu tahun terakhir"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/btnUploadTranskrip"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_upload_dashed"
+                android:drawableTop="@drawable/outline_add_circle_24"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Tap untuk upload dokumen"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableTint="#1B5E20" />
+
+            <TextView
+                android:id="@+id/tvTranskripFileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/gradient_horizontal"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:paddingHorizontal="48dp"
+                android:text="Daftar"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

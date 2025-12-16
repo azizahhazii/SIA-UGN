@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_green"
+    tools:context=".DashboardAdmin">
+
+    <ImageView
+        android:id="@+id/background_logo"
+        android:layout_width="950dp"
+        android:layout_height="950dp"
+        android:src="@drawable/logo_ugn2"
+        android:alpha="0.15"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="-350dp"
+        android:contentDescription="Background Logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:background="@drawable/app_bar"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp">
+                <TextView
+                    android:id="@+id/header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin Dashboard"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btn_logout_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_exit_to_app_24"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="Logout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/greeting_text"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat datang, admin system!"
+                        android:textSize="13sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/notification_badge"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:text="0"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circle_white"
+                        android:textColor="@color/deep_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/light_bg_gold"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingVertical="20dp"
+                        android:background="@drawable/bg_card_bordered_gold">
+
+                        <TextView
+                            android:id="@+id/total_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/total_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Pendaftar"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingVertical="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/bg_stat_bordered_gold">
+
+                        <TextView
+                            android:id="@+id/stat_approved_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disetujui"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="4dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingVertical="24dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_stat_bordered_gold">
+
+                        <TextView
+                            android:id="@+id/stat_review_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menunggu Review"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="4dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/light_bg_gold"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingVertical="16dp"
+                        android:background="@drawable/bg_card_bordered_gold">
+
+                        <TextView
+                            android:id="@+id/reject_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/reject_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ditolak"
+                            android:textSize="14sp"
+                            android:textColor="@color/red_error"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_kelola_pendaftaran" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelola Pendaftaran"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:background="@drawable/bg_button_primary"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:minHeight="0dp"
+                    android:elevation="0dp"/>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_bottom_nav_border">
+
+            <LinearLayout
+                android:id="@+id/nav_home_active"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="7dp"
+                android:paddingHorizontal="14dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_nav_item_active">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/material_symbols_home_rounded"
+                    android:contentDescription="Home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/nav_form"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:src="@drawable/proicons_save_pencil"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kelola Pendaftaran"
+                android:scaleType="centerInside"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
